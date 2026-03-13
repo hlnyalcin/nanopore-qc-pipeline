@@ -1,0 +1,3 @@
+SyntaxError in file "/mnt/c/Users/90541/nanopore_project/Snakefile", line 9:
+unterminated string literal :
+				"output: " qc / NanoPlot - report . html "

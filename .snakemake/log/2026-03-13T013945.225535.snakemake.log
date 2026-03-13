@@ -1,0 +1,41 @@
+Assuming unrestricted shared filesystem usage.
+host: LAPTOP-S4O3DLHT
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job         count
+--------  -------
+all             1
+nanoplot        1
+total           2
+
+Select jobs to execute...
+Execute 1 jobs...
+[Fri Mar 13 01:39:45 2026]
+localrule nanoplot:
+    input: barcode77.fastq
+    output: qc/nanoplot.html
+    jobid: 1
+    reason: Missing output files: qc/nanoplot.html
+    resources: tmpdir=/tmp
+Waiting at most 5 seconds for missing files:
+qc/nanoplot.html (missing locally)
+MissingOutputException in rule nanoplot in file "/mnt/c/Users/90541/nanopore_project/Snakefile", line 5:
+Job 1  completed successfully, but some output files are missing. Missing files after 5 seconds. This might be due to filesystem latency. If that is the case, consider to increase the wait time with --latency-wait:
+qc/nanoplot.html (missing locally, parent dir contents: LengthvsQualityScatterPlot_dot.html, LengthvsQualityScatterPlot_dot.png, LengthvsQualityScatterPlot_kde.html, LengthvsQualityScatterPlot_kde.png, NanoPlot-report.html, NanoPlot_20260313_0140.log, NanoStats.txt, Non_weightedHistogramReadlength.html, Non_weightedHistogramReadlength.png, Non_weightedLogTransformed_HistogramReadlength.html, Non_weightedLogTransformed_HistogramReadlength.png, WeightedHistogramReadlength.html, WeightedHistogramReadlength.png, WeightedLogTransformed_HistogramReadlength.html, WeightedLogTransformed_HistogramReadlength.png, Yield_By_Length.html, Yield_By_Length.png)
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look below for error messages
+[Fri Mar 13 01:49:03 2026]
+Error in rule nanoplot:
+    message: None
+    jobid: 1
+    input: barcode77.fastq
+    output: qc/nanoplot.html
+    shell:
+        NanoPlot --fastq barcode77.fastq --outdir qc
+        (command exited with non-zero exit code)
+Complete log(s): /mnt/c/Users/90541/nanopore_project/.snakemake/log/2026-03-13T013945.225535.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

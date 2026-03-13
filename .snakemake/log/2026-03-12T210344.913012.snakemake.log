@@ -1,0 +1,32 @@
+Building DAG of jobs...
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job         count
+--------  -------
+all             1
+nanoplot        1
+total           2
+
+Select jobs to execute...
+
+[Thu Mar 12 21:03:48 2026]
+rule nanoplot:
+    input: barcode77.fastq
+    output: qc/nanoplot.html
+    jobid: 1
+    reason: Missing output files: qc/nanoplot.html
+    resources: tmpdir=C:\Users\90541\AppData\Local\Temp
+
+[Thu Mar 12 21:03:48 2026]
+Error in rule nanoplot:
+    jobid: 1
+    input: barcode77.fastq
+    output: qc/nanoplot.html
+    shell:
+        NanoPlot --fastq barcode77.fastq --outdir qc
+        (one of the commands exited with non-zero exit code; note that snakemake uses bash strict mode!)
+
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake\log\2026-03-12T210344.913012.snakemake.log
